@@ -1432,7 +1432,7 @@
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 	armor = list("blunt" = 70, "slash" = 85, "stab" = 60, "piercing" = 60, "fire" = 25, "acid" = 0) //Slightly above carapace cuirass
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
-	max_integrity = 275
+	max_integrity = 225
 	allowed_sex = list(MALE, FEMALE)
 	var/do_sound = TRUE
 	sewrepair = TRUE
@@ -1457,7 +1457,7 @@
 	icon_state = "carapacecuirass"
 	item_state = "carapacecuirass"
 	flags_inv = HIDEBOOB
-	max_integrity = 250
+	max_integrity = 200
 	equip_delay_self = 30
 
 //the following changes are apart of a kazengite content update, and uses armor values from ratwood
