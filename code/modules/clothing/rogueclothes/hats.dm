@@ -2151,6 +2151,23 @@
 /obj/item/clothing/head/roguetown/helmet/visored/captain/ComponentInitialize()
 	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), HIDEHAIR, null, 'sound/items/visor.ogg', null, UPD_HEAD)
 
+// the klappenlonger
+/obj/item/clothing/head/roguetown/helmet/bascinet/klapplong
+	name = "klappenlonger"
+	desc = "A steel bascinet helmet with a straight visor, or \"klappvisier\", which can greatly reduce visibility. This one is ridiculously long, and due to its flawed design, the visor doesnt open."
+	icon = 'icons/roguetown/clothing/special/klappenlonger.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/klappenlonger.dmi'
+	icon_state = "klapplong"
+	item_state = "klapplong"
+	detail_tag = "_detail"
+	emote_environment = 3
+	body_parts_covered = FULL_HEAD
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	block2add = FOV_BEHIND
+	smeltresult = /obj/item/ingot/steel
+	smelt_bar_num = 2
+
 /obj/item/clothing/head/roguetown/helmet/carapacecap
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
 	name = "carapace cap"
