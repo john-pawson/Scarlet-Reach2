@@ -353,6 +353,10 @@
 
 		if(VDrinker)
 			// Regular vampire lords
+			if(HAS_TRAIT(C, TRAIT_SILVER_BLOOD))
+				to_chat(user, span_userdanger("The blood contains silver in it! It BURNS!!"))
+				user.adjust_fire_stacks(2, /datum/status_effect/fire_handler/fire_stacks/sunder)
+				user.ignite_mob()
 			if(zomwerewolf)
 				to_chat(user, span_danger("I'm going to puke..."))
 				addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
@@ -402,6 +406,10 @@
 		if(VDrinker)
 			VDrinker.vitae = min(VDrinker.vitae + 400, 5000)
 			to_chat(user, span_notice("I gain 400 vitae from drinking blood. Current vitae: [VDrinker.vitae]"))
+			if(HAS_TRAIT(C, TRAIT_SILVER_BLOOD))
+				to_chat(user, span_userdanger("The blood contains silver in it! It BURNS!!"))
+				user.adjust_fire_stacks(2, /datum/status_effect/fire_handler/fire_stacks/sunder)
+				user.ignite_mob()
 		else if(VDrinker && !C.mind)
 			to_chat(user, span_warning("This blood is not pure enough to nourish me properly!"))
 
